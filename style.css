@@ -5,6 +5,8 @@
   margin: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
 }
 
 :root{
@@ -28,6 +30,10 @@ nav {
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.top-nav {
+  display: none;
 }
 
 .toggle {
@@ -61,9 +67,11 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 100vh;
-  pad: 2rem;
+  z-index: 1;
+  padding: 2rem;
   background: rgb(39,42,49);
   background: linear-gradient(0deg, rgba(39,42,49,1) 0%, rgba(172,168,168,1) 100%);
   color: var(--main-bg-color);
@@ -173,7 +181,7 @@ nav {
   justify-content: center;
 }
 
-.clm2 h3 {
+.section-title {
   text-align: center;
   font-size: 24px;
   font-weight: 200;
@@ -181,7 +189,7 @@ nav {
   margin-bottom: 20px;
 }
 
-.clm2 h3::after {
+.section-title::after {
   position: absolute;
   content: '';
   height: 3px;
@@ -194,7 +202,7 @@ nav {
 
 .services {
   width: 100%;
-  background-color: rgba(226, 226, 226, 0.26);
+  background-color: rgba(226, 226, 226, 0.151);
   margin: 1rem 0;
   padding: 10px;
   display: flex;
@@ -236,4 +244,180 @@ nav {
   color: var(--orange-color);
   background-color: var(--gery-color);
   border: 2px solid var(--orange-color);
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  header {
+    height: 110px;
+    box-shadow: 2px 0px 10px #adadad;
+    background-color: var(--main-bg-color);
+  }
+
+  nav {
+    width: 100%;
+    height:70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .top-nav {
+    display: flex;
+    height: 40px;
+    background-color: var(--bl-color);
+  }
+
+  .top-nav ul {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: var(--gery-color);
+  }
+
+  .top-nav li {
+    margin: 1.3rem 10px;
+  }
+
+  .top-nav a {
+    color: var(--gery-color);
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+
+  #logo img{
+    width: 50px;
+    height: 50px;
+  }
+
+  .open-menu {
+    display: none;
+  }
+
+  .menu-list {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    background: rgba(39, 42, 49, 0);
+    background: linear-gradient(0);
+    color: var(--bl-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(0);
+    transition: 0;
+    text-align: center;
+  }
+  .menu-list ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-list li,
+  .menu-list a {
+    color: rgb(15, 15, 15);
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+  }
+
+  .menu-list a:hover {
+    transform: scale(1.2);
+    border-bottom: none;
+    color: var(--orange-color);
+  }
+
+  .menu-btn {
+    margin-top: 0;
+    width: 150px;
+    height: 48px;
+    border: 4px solid var(--orange-color);
+    font-size: 18px;
+  }
+
+  /*---------------------clm-1----------*/
+
+  .clm1 {
+    padding: 8rem 9rem;
+    padding-top: 8rem;
+  }
+
+  .clm1 h2 {
+    width: 500px;
+  }
+
+  #first-title {
+    font-size: 30px;
+  }
+  
+  #scd-title {
+    font-size: 52px;
+  }
+
+  #description {
+    width: 650px;
+  }
+
+  /*------------------CLM2-----------*/
+  .cards {
+    display: flex;
+    flex-direction: center;
+    margin: 0 auto;
+  }
+
+  .services {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 160px;
+    height: 180px;
+    margin: 0.2rem;
+    text-align: center;
+  }
+
+  .services:hover {
+    border: 3px solid var(--main-bg-color);
+  }
+
+  .services h4 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .services p {
+    width: 100%;
+  }
+
+  .join_link {
+    background-color: #d3d3d300;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 1px solid var(--main-bg-color);
+    color: var(--main-bg-color);
+  }
+
+  .join_link:hover {
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    border-bottom: 1px solid var(--orange-color);
+  }
 }
