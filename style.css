@@ -19,6 +19,8 @@ body {
   width: 100%;
   max-width: 768px;
   background-color: var(--main-bg-color);
+  background: linear-gradient(0deg, rgb(243, 243, 243) 80%, rgba(235, 235, 235, 0.432) 100%),
+              url('./images/teach-class-bg.jpg') no-repeat center center / cover;
 }
 
 nav {
@@ -125,22 +127,28 @@ nav {
 .clm1 {
   height: 100%;
   color: var(--bl-color);
-  /* background: rgb(172,168,168) url(./images/teach-class-bg.jpg) no-repeat;
-  background: linear-gradient(0deg, rgba(172,168,168,1) 0%, rgba(172,168,168,0.03405112044817926) 100%); */
-  background-size: cover;
   padding: 2rem 1rem;
 }
 
 #first-title {
   color: var(--orange-color);
-  font-size: 26px;
+  font-size: 24px;
+  margin-bottom: 7px;
 }
 
 #scd-title {
   color: var(--orange-color);
-  font-size: 36px;
+  font-size: 42px;
   text-transform: uppercase;
   font-weight: bolder;
+}
+
+#scd-title,
+#first-title {
+  background: url(./images/woman-teaches.jpg);
+  background-size: cover;
+  -webkit-text-fill-color: #fd412caf;
+  -webkit-background-clip: text;
 }
 
 #description {
