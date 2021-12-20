@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root{
+  --main-bg-color: #fafafa;
+  --bl-color: #272a31;
+  --orange-color: #ec5242;
+  --gery-color: #d3d3d3;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
+  background-color: var(--main-bg-color);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.toggle {
+  display: block;
+  font-size: 35px;
+  color: var(--bl-color);
+  z-index: 10;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.open-icon {
+  display: block;
+  left: 1rem;
+}
+
+.close-icon {
+  display: none;
+}
+
+.open-menu .open-icon {
+  display: none;
+}
+
+.open-menu .close-icon {
+  display: block;
+  color: var(--main-bg-color);
+}
+
+.menu-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pad: 2rem;
+  background: rgb(39,42,49);
+  background: linear-gradient(0deg, rgba(39,42,49,1) 0%, rgba(172,168,168,1) 100%);
+  color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 1.5s;
+  text-align: center;
+}
+
+.menu-list li,
+.menu-list a {
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--main-bg-color);
+  font-size: 24px;
+  transition: all 0.4s ease-out;
+}
+
+.menu-list li {
+  margin: 1rem;
+}
+
+.menu-list a {
+  transition: all 0.4s ease-out;
+}
+
+.menu-btn {
+  margin-top: 2rem;
+  width: 170px;
+  height: 60px;
+  border: 3px solid var(--orange-color);
+  background: none;
+  color: var(--orange-color);
+  font-size: 20px;
+  transition: all 0.4s ease-out;
+}
+
+.menu-list a:hover {
+  transform: scale(1.2);
+  border-bottom: 2px solid var(--gery-color);
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.open-menu .menu-list {
+  transform: translateX(0);
+  z-index: 5;
+}
+
+#logo {
+  display: none;
+}
+
+/*-------------first section*---------------*/
+
+.clm1 {
+  height: 100%;
+  color: var(--bl-color);
+  /* background: rgb(172,168,168) url(./images/teach-class-bg.jpg) no-repeat;
+  background: linear-gradient(0deg, rgba(172,168,168,1) 0%, rgba(172,168,168,0.03405112044817926) 100%); */
+  background-size: cover;
+  padding: 2rem 1rem;
+}
+
+#first-title {
+  color: var(--orange-color);
+  font-size: 26px;
+}
+
+#scd-title {
+  color: var(--orange-color);
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+#description {
+  border: 1px solid #fff;
+  background-color: #f3f3f3;
+  padding: 15px;
+  margin: 1.7rem 0;
+}
+
+.clm1 h3 {
+  font-size: 32px;
+}
