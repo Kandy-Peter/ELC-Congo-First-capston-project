@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 * {
   padding: 0;
@@ -20,9 +21,10 @@ body {
   margin: 0 auto;
   width: 100%;
   max-width: 768px;
-  background-color: var(--main-bg-color);
-  background: linear-gradient(0deg, rgb(243, 243, 243) 80%, rgba(235, 235, 235, 0.432) 100%),
-              url('./images/teach-class-bg.jpg') no-repeat top / cover;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0);
 }
 
 nav {
@@ -30,6 +32,7 @@ nav {
   display: flex;
   justify-content: start;
   align-items: center;
+  position: absolute;
 }
 
 .top-nav {
@@ -136,6 +139,10 @@ nav {
   height: 100%;
   color: var(--bl-color);
   padding: 2rem 1rem;
+  padding-top: 8rem;
+  background-color: var(--main-bg-color);
+  background: linear-gradient(0deg, rgb(243, 243, 243) 70%, rgba(235, 235, 235, 0.432) 100%),
+              url('../images/best-bg.jpg') no-repeat top / cover;
 }
 
 #first-title {
@@ -148,7 +155,7 @@ nav {
   color: var(--orange-color);
   font-size: 42px;
   text-transform: uppercase;
-  font-weight: bolder;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #scd-title,
@@ -202,6 +209,7 @@ nav {
 
 .services {
   width: 100%;
+  min-height: 100px;
   background-color: rgba(226, 226, 226, 0.151);
   margin: 1rem 0;
   padding: 10px;
@@ -246,6 +254,80 @@ nav {
   border: 2px solid var(--orange-color);
 }
 
+/*------------------CLM3 FEATURES-----------------*/
+
+.clm3 {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.clm3-container {
+  margin-top: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.teach-details {
+  padding-left: 0.9rem;
+}
+
+.teach-details h3 {
+  font-size: 16px;
+  color: #272a31;
+}
+
+.teach-details h4 {
+  font-size: 12px;
+  color: var(--orange-color);
+  font-style: italic;
+  margin: 5px 0;
+}
+
+/* .teach-details h4::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  left: 33%;
+  margin-top: 25px;
+  width: 20px;
+  transform: translate(-50%, 50%);
+  background-color:  #c7c7c7;
+} */
+
+.teach-details p {
+  font-size: 12px;
+  color: #272a31;
+  font-weight: bolder;
+  margin-top: 20px;
+}
+
+.teacher_pic {
+  width: 90px;
+  height: 90px;
+  max-width: fit-content;
+}
+
+.see_more {
+  order: 3;
+  width: 100%;
+  height: 60px;
+  border: 1px solid #797979;
+  background-color: var(--main-bg-color);
+  font-size: 20px;
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.see_more i {
+  color: var(--orange-color);
+  padding-left: 7px;
+}
+
+/*-------------------------------Partners column-------------------------*/
+
 @media screen and (min-width: 768px) {
   body {
     width: 100%;
@@ -259,6 +341,7 @@ nav {
   }
 
   nav {
+    position: relative;
     width: 100%;
     height:70px;
     display: flex;
@@ -419,5 +502,22 @@ nav {
     background-color: rgba(255, 255, 255, 0);
     border: none;
     border-bottom: 1px solid var(--orange-color);
+  }
+
+  /*--------------------clm3 features---------------*/
+  .clm3 {
+    padding-bottom: 4rem;
+  }
+  .teachers-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 2rem;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .see_more {
+    display: none;
   }
 }
