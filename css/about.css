@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 
-:root{
+:root {
   --main-bg-color: #fafafa;
   --bl-color: #272a31;
   --orange-color: #ec5242;
@@ -75,8 +75,8 @@ nav {
   height: 100vh;
   z-index: 1;
   padding: 2rem;
-  background: rgb(39,42,49);
-  background: linear-gradient(0deg, rgba(39,42,49,1) 0%, rgba(172,168,168,1) 100%);
+  background: rgb(39, 42, 49);
+  background: linear-gradient(0deg, rgba(39, 42, 49, 1) 0%, rgba(172, 168, 168, 1) 100%);
   color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
@@ -115,6 +115,13 @@ nav {
   transition: all 0.4s ease-out;
 }
 
+.clm1 a {
+  color: var(--bl-color);
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
 .menu-list a:hover {
   transform: scale(1.2);
   border-bottom: 2px solid var(--gery-color);
@@ -133,7 +140,7 @@ nav {
   display: none;
 }
 
-/*-----------clm1--------------*/
+/* -----------clm1-------------- */
 
 .clm1 {
   height: 100%;
@@ -142,7 +149,8 @@ nav {
   padding-top: 8rem;
   padding-bottom: 4rem;
   text-align: center;
-  background-color: var(--main-bg-color);
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(238, 238, 238, 1) 100%);
 }
 
 #first-title {
@@ -150,7 +158,6 @@ nav {
   margin: 0 auto;
   font-size: 24px;
   margin-bottom: 7px;
-  color: var(--orange-color);
 }
 
 #scd-title {
@@ -159,7 +166,6 @@ nav {
   font-size: 42px;
   text-transform: uppercase;
   font-family: 'Montserrat', sans-serif;
-  color: var(--orange-color);
   margin-bottom: 1rem;
 }
 
@@ -177,14 +183,7 @@ nav {
   font-size: 12px;
 }
 
-.clm1 a {
-  color: var(--bl-color);
-  font-weight: 700;
-  text-decoration: underline;
-  font-size: 12px;
-}
-
-/*-------------------CLM2--------------------*/
+/* -------------------CLM2-------------------- */
 
 .clm2 {
   padding: 2rem 1rem;
@@ -208,12 +207,19 @@ nav {
   margin-top: 40px;
   width: 30px;
   transform: translate(-50%, 50%);
-  background-color:  var(--orange-color);
+  background-color: var(--orange-color);
 }
 
 .clm2 .section-title {
   width: 80%;
   margin: 0 auto;
+}
+
+footer p {
+  font-size: 13px;
+  color: var(--bl-color);
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .clm2 p {
@@ -230,11 +236,20 @@ nav {
   margin: 1.5rem auto;
 }
 
+footer img {
+  width: 35%;
+  height: 40px;
+}
+
+.partners img {
+  width: 100px;
+}
+
 #abt-logo img {
   width: 90%;
 }
 
-/*--------------------CLM3-------------*/
+/* --------------------CLM3------------- */
 
 .clm3 {
   padding: 2.7rem;
@@ -260,14 +275,15 @@ nav {
 }
 
 .grade1 {
-  background-color: var(--main-bg-color);
-  background: linear-gradient(0deg, rgba(247, 104, 22, 0.521) 100%, rgba(235, 235, 235, 0.432) 100%),
-                url(../images/best-bg.jpg) center center / cover;
+  background:
+    linear-gradient(0deg, rgba(247, 104, 22, 0.521) 100%, rgba(235, 235, 235, 0.432) 100%),
+    url(../images/best-bg.jpg) center center / cover;
 }
 
 .grade2 {
-  background: linear-gradient(0deg, rgba(247, 104, 22, 0.521) 100%, rgba(235, 235, 235, 0.432) 100%),
-               url(../images/woman-teaches.jpg) center center /cover;
+  background:
+    linear-gradient(0deg, rgba(247, 104, 22, 0.521) 100%, rgba(235, 235, 235, 0.432) 100%),
+    url(../images/woman-teaches.jpg) center center /cover;
 }
 
 .graduations h3 {
@@ -275,7 +291,7 @@ nav {
   margin: 1rem;
 }
 
-/*------------CLM4-----------------*/
+/* ------------CLM4----------------- */
 
 .clm4 {
   background-color: var(--bl-color);
@@ -293,14 +309,10 @@ nav {
 }
 
 .partners li {
+  margin: 1rem 2rem;
   margin-top: 1.5rem;
   display: flex;
   align-items: center;
-  margin: 1rem 2rem;
-}
-
-.partners img {
-  width: 100px;
 }
 
 footer {
@@ -308,18 +320,6 @@ footer {
   justify-content: space-between;
   padding: 1rem;
   height: 100px;
-}
-
-footer img {
-  width: 35%;
-  height: 40px;
-}
-
-footer p {
-  font-size: 13px;
-  color: var(--bl-color);
-  margin-left: 10px;
-  font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -330,14 +330,13 @@ footer p {
 
   header {
     height: 110px;
-    box-shadow: 2px 0px 10px #a7a7a7;
+    box-shadow: 2px 0 10px #a7a7a7;
     background-color: #fff;
   }
 
   nav {
     position: relative;
-    width: 100%;
-    height:70px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -346,7 +345,7 @@ footer p {
   }
 
   a {
-      color: var(--bl-color);
+    color: var(--bl-color);
   }
 
   .top-nav {
@@ -381,35 +380,6 @@ footer p {
     align-items: center;
   }
 
-  #logo img{
-    width: 50px;
-    height: 50px;
-  }
-
-  .open-menu {
-    display: none;
-  }
-
-  .menu-list {
-    position: relative;
-    height: 100%;
-    width: 70%;
-    background: rgba(39, 42, 49, 0);
-    background: linear-gradient(0);
-    color: var(--bl-color);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    transform: translateX(0);
-    transition: 0;
-    text-align: center;
-  }
-  .menu-list ul {
-    display: flex;
-    justify-content: space-around;
-  }
-
   .menu-list li,
   .menu-list a {
     color: rgb(15, 15, 15);
@@ -423,6 +393,48 @@ footer p {
     color: var(--orange-color);
   }
 
+  #logo a {
+    color: #272a31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer img {
+    width: 200px;
+    height: 60px;
+    margin-right: 4rem;
+  }
+
+  #logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .open-menu {
+    display: none;
+  }
+
+  .menu-list {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    background: rgba(39, 42, 49, 0);
+    color: var(--bl-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(0);
+    transition: none;
+    text-align: center;
+  }
+
+  .menu-list ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
   .menu-btn {
     margin-top: 0;
     width: 150px;
@@ -431,7 +443,7 @@ footer p {
     font-size: 18px;
   }
 
-  /*-------------CLM1---------------*/
+  /* -------------CLM1--------------- */
 
   .clm1 {
     padding: 8rem 9rem;
@@ -446,7 +458,7 @@ footer p {
   #first-title {
     font-size: 30px;
   }
-  
+
   #scd-title {
     font-size: 52px;
   }
@@ -472,7 +484,7 @@ footer p {
     width: 45%;
   }
 
-  /*-----------------------------CLM3----------*/
+  /* -----------------------------CLM3---------- */
 
   .graduations {
     display: flex;
@@ -489,21 +501,16 @@ footer p {
   .partners {
     width: 40%;
     margin: 2rem auto;
+    flex-wrap: nowrap;
   }
 
   .partners li {
-    margin-top: 1.5rem;
     margin: 1rem 2rem;
+    margin-top: 1.5rem;
   }
 
   footer {
     justify-content: center;
     align-items: center;
-  }
-
-  footer img {
-    width: 200px;
-    height: 60px;
-    margin-right: 4rem;
   }
 }

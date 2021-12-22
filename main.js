@@ -77,3 +77,25 @@ for (let n = 0; n < features.length; n += 1) {
     </div>
   `;
 }
+
+const button = document.querySelector('.see_more');
+const teachers = document.querySelectorAll('.clm3-container');
+let state = true;
+
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (state) {
+    Array.from(teachers).forEach((teacher) => {
+      teacher.classList.add('see-more');
+      button.innerHTML = 'See less <i class="far fa-arrow-alt-circle-up"></i>';
+    });
+    state = false;
+  } else {
+    state = false;
+    Array.from(teachers).forEach((teacher) => {
+      teacher.classList.remove('see-more');
+      button.innerHTML = 'See more <i class="far fa-arrow-alt-circle-down"></i>';
+    });
+    state = true;
+  }
+});

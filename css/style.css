@@ -10,7 +10,7 @@
   text-decoration: none;
 }
 
-:root{
+:root {
   --main-bg-color: #fafafa;
   --bl-color: #272a31;
   --orange-color: #ec5242;
@@ -75,8 +75,8 @@ nav {
   height: 100vh;
   z-index: 1;
   padding: 2rem;
-  background: rgb(39,42,49);
-  background: linear-gradient(0deg, rgba(39,42,49,1) 0%, rgba(172,168,168,1) 100%);
+  background: rgb(39, 42, 49);
+  background: linear-gradient(0deg, rgba(39, 42, 49, 1) 0%, rgba(172, 168, 168, 1) 100%);
   color: var(--main-bg-color);
   display: flex;
   flex-direction: column;
@@ -133,16 +133,23 @@ nav {
   display: none;
 }
 
-/*-------------first section*---------------*/
+#logo a {
+  color: #272a31;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------------first section*--------------- */
 
 .clm1 {
   height: 100%;
   color: var(--bl-color);
   padding: 2rem 1rem;
   padding-top: 8rem;
-  background-color: var(--main-bg-color);
-  background: linear-gradient(0deg, rgb(243, 243, 243) 70%, rgba(235, 235, 235, 0.432) 100%),
-              url('../images/best-bg.jpg') no-repeat top / cover;
+  background:
+    linear-gradient(0deg, rgb(243, 243, 243) 70%, rgba(235, 235, 235, 0.432) 100%),
+    url('../images/best-bg.jpg') no-repeat top / cover;
 }
 
 #first-title {
@@ -160,7 +167,7 @@ nav {
 
 #scd-title,
 #first-title {
-  background: url(./images/woman-teaches.jpg);
+  background: url(../images/woman-teaches.jpg);
   background-size: cover;
   -webkit-text-fill-color: #fd412caf;
   -webkit-background-clip: text;
@@ -177,10 +184,10 @@ nav {
   font-size: 32px;
 }
 
-/*----------------------CLM2--------------*/
+/* ----------------------CLM2-------------- */
 
 .clm2 {
-  background-color: var( --bl-color);
+  background-color: var(--bl-color);
   color: var(--main-bg-color);
   padding: 1rem;
   display: flex;
@@ -204,7 +211,7 @@ nav {
   margin-top: 50px;
   width: 60px;
   transform: translate(-50%, 50%);
-  background-color:  var(--orange-color);
+  background-color: var(--orange-color);
 }
 
 .services {
@@ -225,9 +232,21 @@ nav {
   width: 20%;
 }
 
+footer img {
+  width: 35%;
+  height: 40px;
+}
+
 .services img {
   width: 40px;
   height: 40px;
+}
+
+footer p {
+  font-size: 13px;
+  color: var(--bl-color);
+  margin-left: 10px;
+  font-weight: bold;
 }
 
 .services p {
@@ -254,7 +273,7 @@ nav {
   border: 2px solid var(--orange-color);
 }
 
-/*------------------CLM3 FEATURES-----------------*/
+/* ------------------CLM3 FEATURES----------------- */
 
 .clm3 {
   padding: 20px;
@@ -266,8 +285,16 @@ nav {
 
 .clm3-container {
   margin-top: 1.3rem;
-  display: flex;
+  display: none;
   align-items: center;
+}
+
+.clm3-container:nth-child(-n+2) {
+  display: flex;
+}
+
+.see-more {
+  display: flex;
 }
 
 .teach-details {
@@ -286,28 +313,20 @@ nav {
   margin: 5px 0;
 }
 
-/* .teach-details h4::after {
-  position: absolute;
-  content: '';
-  height: 2px;
-  left: 33%;
-  margin-top: 25px;
-  width: 20px;
-  transform: translate(-50%, 50%);
-  background-color:  #c7c7c7;
-} */
-
 .teach-details p {
   font-size: 12px;
   color: #272a31;
   font-weight: bolder;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .teacher_pic {
-  width: 90px;
-  height: 90px;
-  max-width: fit-content;
+  width: fit-content;
+  max-width: 85px;
+  height: 85px;
+  border: 3px solid var(--orange-color);
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .see_more {
@@ -326,7 +345,42 @@ nav {
   padding-left: 7px;
 }
 
-/*-------------------------------Partners column-------------------------*/
+/* ------------CLM4----------------- */
+
+.clm4 {
+  background-color: var(--bl-color);
+  color: var(--gery-color);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.partners li {
+  display: flex;
+  align-items: center;
+  margin: 1rem 2rem;
+  margin-top: 1.5rem;
+}
+
+.partners img {
+  width: 100px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 100px;
+}
+
+/* -------------------------------Partners column------------------------- */
 
 @media screen and (min-width: 768px) {
   body {
@@ -336,14 +390,13 @@ nav {
 
   header {
     height: 110px;
-    box-shadow: 2px 0px 10px #adadad;
+    box-shadow: 2px 0 10px #adadad;
     background-color: var(--main-bg-color);
   }
 
   nav {
     position: relative;
-    width: 100%;
-    height:70px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -383,7 +436,13 @@ nav {
     align-items: center;
   }
 
-  #logo img{
+  footer img {
+    width: 200px;
+    height: 60px;
+    margin-right: 4rem;
+  }
+
+  #logo img {
     width: 50px;
     height: 50px;
   }
@@ -397,16 +456,16 @@ nav {
     height: 100%;
     width: 70%;
     background: rgba(39, 42, 49, 0);
-    background: linear-gradient(0);
     color: var(--bl-color);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     transform: translateX(0);
-    transition: 0;
+    transition: none;
     text-align: center;
   }
+
   .menu-list ul {
     display: flex;
     justify-content: space-around;
@@ -433,7 +492,7 @@ nav {
     font-size: 18px;
   }
 
-  /*---------------------clm-1----------*/
+  /* ---------------------clm-1---------- */
 
   .clm1 {
     padding: 8rem 9rem;
@@ -447,7 +506,7 @@ nav {
   #first-title {
     font-size: 30px;
   }
-  
+
   #scd-title {
     font-size: 52px;
   }
@@ -456,10 +515,11 @@ nav {
     width: 650px;
   }
 
-  /*------------------CLM2-----------*/
+  /* ------------------CLM2----------- */
+
   .cards {
     display: flex;
-    flex-direction: center;
+    flex-direction: row;
     margin: 0 auto;
   }
 
@@ -489,7 +549,6 @@ nav {
   .join_link {
     background-color: #d3d3d300;
     width: fit-content;
-    height: fit-content;
     margin-top: 4rem;
     margin-bottom: 5rem;
     text-transform: uppercase;
@@ -504,10 +563,16 @@ nav {
     border-bottom: 1px solid var(--orange-color);
   }
 
-  /*--------------------clm3 features---------------*/
+  /* --------------------clm3 features--------------- */
+
   .clm3 {
     padding-bottom: 4rem;
   }
+
+  .clm3-container {
+    display: flex;
+  }
+
   .teachers-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -519,5 +584,21 @@ nav {
 
   .see_more {
     display: none;
+  }
+
+  .partners {
+    width: 40%;
+    margin: 2rem auto;
+    flex-wrap: nowrap;
+  }
+
+  .partners li {
+    margin: 1rem 2rem;
+    margin-top: 1.5rem;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
   }
 }
