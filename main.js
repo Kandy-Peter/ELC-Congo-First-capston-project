@@ -85,14 +85,14 @@ let state = true;
 button.addEventListener('click', (e) => {
   e.preventDefault();
   if (state) {
-    Array.from(teachers).forEach((teacher) => {
+    teachers.forEach((teacher) => {
       teacher.classList.add('see-more');
       button.innerHTML = 'See less <i class="far fa-arrow-alt-circle-up"></i>';
     });
     state = false;
   } else {
     state = false;
-    Array.from(teachers).forEach((teacher) => {
+    teachers.forEach((teacher) => {
       teacher.classList.remove('see-more');
       button.innerHTML = 'See more <i class="far fa-arrow-alt-circle-down"></i>';
     });

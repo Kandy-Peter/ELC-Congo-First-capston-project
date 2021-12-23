@@ -15,15 +15,16 @@ This is a screenshot of my capstone
 
 clone repo: `git clone https://github.com/Kandy-Peter/ELC-Congo-First-capston-project.git`
 
-###Live
+### Live
  To see live project go to: [Live_demo](https://kandy-peter.github.io/ELC-Congo-First-capston-project/)
+
+## Project demo
+
+check this [Loom](https://www.loom.com/share/3928d389540340fc8213fbed1bd10a59) link to watch the video.
 ### Install
 
- run `npm install` to install dependencies
+ run `npm install` to install dependencies.
 
-###Project demo
-
-check this [Loom]() link to watch the video.
 ## Command
 
 These commands are here to help you for how to check errors in your code using Linter
