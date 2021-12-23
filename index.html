@@ -15,6 +15,7 @@
 
         gtag('config', 'G-3PDW9MN5NV');
     </script>
+     <script src="https://unpkg.com/scrollreveal"></script>
     <title>elc-congo-capstone</title>
 </head>
 <body>
@@ -136,5 +137,23 @@
         </p>
     </footer>
     <script src="./main.js"></script>
+    <!-- ------------------add scroll animation------------------- -->
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '40px',
+            duration: 1500,
+            delay: 400,
+            });
+
+            ScrollReveal().reveal('.section-title', { delay: 200, origin: 'top' });
+            ScrollReveal().reveal('#first-title, #scd-title', { delay: 300, origin: 'left' });
+            ScrollReveal().reveal('#description, .clm1 h3, clm1 p', { delay: 300, origin: 'right' });
+            ScrollReveal().reveal('.partners li', { delay: 300, origin: 'bottom', interval: 200 });
+            ScrollReveal().reveal('.teachers-cards', { delay: 100, origin: 'right' });
+            ScrollReveal().reveal('.services', { delay: 200, origin: 'left', interval: 100 });
+            ScrollReveal().reveal('footer img', { delay: 200, origin: 'top' });
+            ScrollReveal().reveal('footer p', { delay: 200, origin: 'bottom' });
+    </script>
 </body>
 </html>
