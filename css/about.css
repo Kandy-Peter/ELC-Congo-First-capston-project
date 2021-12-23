@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-bg-color: #fafafa;
+  --bl-color: #272a31;
+  --orange-color: #ec5242;
+  --gery-color: #d3d3d3;
+}
+
+body {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 768px;
+}
+
+header {
+  background-color: rgba(255, 255, 255, 0);
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+}
+
+.top-nav {
+  display: none;
+}
+
+.toggle {
+  display: block;
+  font-size: 30px;
+  color: var(--bl-color);
+  z-index: 10;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.open-icon {
+  display: block;
+  left: 1rem;
+}
+
+.close-icon {
+  display: none;
+}
+
+.open-menu .open-icon {
+  display: none;
+}
+
+.open-menu .close-icon {
+  display: block;
+  color: var(--main-bg-color);
+}
+
+.menu-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  padding: 2rem;
+  background: rgb(39, 42, 49);
+  background: linear-gradient(0deg, rgba(39, 42, 49, 1) 0%, rgba(172, 168, 168, 1) 100%);
+  color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-100%);
+  transition: transform 1.5s;
+  text-align: center;
+}
+
+.menu-list li,
+.menu-list a {
+  list-style-type: none;
+  text-decoration: none;
+  color: var(--main-bg-color);
+  font-size: 24px;
+  transition: all 0.4s ease-out;
+}
+
+.menu-list li {
+  margin: 1rem;
+}
+
+.menu-list a {
+  transition: all 0.4s ease-out;
+}
+
+.menu-btn {
+  margin-top: 2rem;
+  width: 170px;
+  height: 60px;
+  border: 3px solid var(--orange-color);
+  background: none;
+  color: var(--orange-color);
+  font-size: 20px;
+  transition: all 0.4s ease-out;
+}
+
+.clm1 a {
+  color: var(--bl-color);
+  font-weight: 700;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+.menu-list a:hover {
+  transform: scale(1.2);
+  border-bottom: 2px solid var(--gery-color);
+}
+
+.menu-btn:hover {
+  transform: scale(1.1);
+}
+
+.open-menu .menu-list {
+  transform: translateX(0);
+  z-index: 5;
+}
+
+#logo {
+  display: none;
+}
+
+/* -----------clm1-------------- */
+
+.clm1 {
+  height: 100%;
+  color: var(--bl-color);
+  padding: 2rem 1rem;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  text-align: center;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(238, 238, 238, 1) 100%);
+}
+
+#first-title {
+  color: var(--orange-color);
+  margin: 0 auto;
+  font-size: 24px;
+  margin-bottom: 7px;
+}
+
+#scd-title {
+  color: var(--orange-color);
+  margin: 0 auto;
+  font-size: 42px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 1rem;
+}
+
+#description {
+  border: 1px solid rgb(219, 219, 219);
+  background-color: var(--main-bg-color);
+  padding: 20px;
+  margin: 1.7rem auto;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#text-contact {
+  color: #272a31;
+  font-size: 12px;
+}
+
+/* -------------------CLM2-------------------- */
+
+.clm2 {
+  padding: 2rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--gery-color);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 22px;
+  padding: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.section-title::after {
+  position: absolute;
+  content: '';
+  height: 2px;
+  left: 50%;
+  margin-top: 40px;
+  width: 30px;
+  transform: translate(-50%, 50%);
+  background-color: var(--orange-color);
+}
+
+.clm2 .section-title {
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 13px;
+  color: var(--bl-color);
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.clm2 p {
+  width: 95%;
+  font-size: 12px;
+  color: var(--bl-color);
+  font-weight: bold;
+}
+
+#abt-logo {
+  width: 100%;
+  border: 1px solid #a7a7a7;
+  padding: 20px;
+  margin: 1.5rem auto;
+}
+
+footer img {
+  width: 35%;
+  height: 40px;
+}
+
+.partners img {
+  width: 100px;
+}
+
+#abt-logo img {
+  width: 90%;
+}
+
+/* --------------------CLM3------------- */
+
+.clm3 {
+  padding: 2.7rem;
+}
+
+#grade-p {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #272a31;
+}
+
+.grade1,
+.grade2 {
+  height: 200px;
+  color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.4rem auto;
+}
+
+.grade1 {
+  background:
+    linear-gradient(0deg, rgba(247, 104, 22, 0.521) 100%, rgba(235, 235, 235, 0.432) 100%),
+    url(../images/best-bg.jpg) center center / cover;
+}
+
+.grade2 {
+  background:
+    linear-gradient(0deg, rgba(247, 104, 22, 0.521) 100%, rgba(235, 235, 235, 0.432) 100%),
+    url(../images/woman-teaches.jpg) center center /cover;
+}
+
+.graduations h3 {
+  font-size: 32px;
+  margin: 1rem;
+}
+
+/* ------------CLM4----------------- */
+
+.clm4 {
+  background-color: var(--bl-color);
+  color: var(--gery-color);
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.partners li {
+  margin: 1rem 2rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    width: 100%;
+    max-width: 1400px;
+  }
+
+  header {
+    height: 110px;
+    box-shadow: 2px 0 10px #a7a7a7;
+    background-color: #fff;
+  }
+
+  nav {
+    position: relative;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  a {
+    color: var(--bl-color);
+  }
+
+  .top-nav {
+    display: flex;
+    height: 40px;
+    background-color: var(--bl-color);
+  }
+
+  .top-nav ul {
+    width: 75%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    color: var(--gery-color);
+  }
+
+  .top-nav li {
+    margin: 1.3rem 10px;
+  }
+
+  .top-nav a {
+    color: var(--gery-color);
+  }
+
+  .toggle {
+    display: none;
+  }
+
+  #logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .menu-list li,
+  .menu-list a {
+    color: rgb(15, 15, 15);
+    font-size: 16px;
+    transition: all 0.2s ease-out;
+  }
+
+  .menu-list a:hover {
+    transform: scale(1.2);
+    border-bottom: none;
+    color: var(--orange-color);
+  }
+
+  #logo a {
+    color: #272a31;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  footer img {
+    width: 200px;
+    height: 60px;
+    margin-right: 4rem;
+  }
+
+  #logo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .open-menu {
+    display: none;
+  }
+
+  .menu-list {
+    position: relative;
+    height: 100%;
+    width: 70%;
+    background: rgba(39, 42, 49, 0);
+    color: var(--bl-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(0);
+    transition: none;
+    text-align: center;
+  }
+
+  .menu-list ul {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-btn {
+    margin-top: 0;
+    width: 150px;
+    height: 48px;
+    border: 4px solid var(--orange-color);
+    font-size: 18px;
+  }
+
+  /* -------------CLM1--------------- */
+
+  .clm1 {
+    padding: 8rem 9rem;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  .clm1 h2 {
+    width: 700px;
+  }
+
+  #first-title {
+    font-size: 30px;
+  }
+
+  #scd-title {
+    font-size: 52px;
+  }
+
+  #description {
+    width: 650px;
+    font-size: 14px;
+    text-align: center;
+    padding: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  .clm2 {
+    padding: 4rem 10rem;
+  }
+
+  .clm2 p {
+    width: 480px;
+    margin: 1.6rem auto;
+  }
+
+  #abt-logo {
+    width: 45%;
+  }
+
+  /* -----------------------------CLM3---------- */
+
+  .graduations {
+    display: flex;
+    width: 65%;
+    margin: 0 auto;
+  }
+
+  .grade1,
+  .grade2 {
+    width: 100%;
+    margin: 1rem;
+  }
+
+  .partners {
+    width: 40%;
+    margin: 2rem auto;
+    flex-wrap: nowrap;
+  }
+
+  .partners li {
+    margin: 1rem 2rem;
+    margin-top: 1.5rem;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
+  }
+}
