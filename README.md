@@ -41,6 +41,14 @@ These commands are here to help you for how to check errors in your code using L
 * To install Eslint run `npm install --save-dev eslint@7.x eslint-config-airbnb-base@14.x eslint-plugin-import@2.x babel-eslint@10.x`
 And to fix lint errors run `npx eslint .`
 
+## Authors
+
+👤 **Kandi Peter**
+
+- GitHub: [Kandi-Peter](https://github.com/Kandy-Peter)
+- LinkedIn: [Kandi-Kamuntu](https://www.linkedin.com/in/kandi-peter-a49590212/)
+- twitter: [Kandi_Peter](https://twitter.com/peter_kandy)
+
 ## Licences :
 
 - The original template is from: [Cindy Shin in Behance](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
